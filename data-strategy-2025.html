@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Every Business Should Invest in a Data Strategy in 2025</title>
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Urbanist', sans-serif;
+      background: #f6f6f6;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .brand img {
+      height: 32px;
+    }
+
+    .brand span {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .blog-content {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+    }
+
+    .blog-content h1 {
+      color: #ff7a00;
+    }
+
+    .blog-content p {
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #000000cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+
+    /* Enquiry form styling (same as index) */
+#contact {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+#contact h2.section-title {
+  text-align: center;
+  color: #ff7a00;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input,
+#contact textarea {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+#contact button[type="submit"] {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #e56700;
+}
+
+#contact p {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+
+    /* Enquiry form styling (same as index) */
+
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">
+      <img src="icon.png" alt="Pinaki Logo" />
+      <span>Pinaki</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="blog-content">
+    <h1>Why Every Business Should Invest in a Data Strategy in 2025</h1>
+    <p>In 2025, data will no longer be a luxury—it’s a necessity. Regardless of size or industry, businesses that thrive will be those that can gather, process, and act on data efficiently.</p>
+
+    <p>Think of your data as a raw resource—like crude oil. It’s only valuable when it’s refined. A data strategy helps you define what data matters, how to store it, protect it, and use it to make better decisions.</p>
+
+    <p>Retailers are using data to personalize customer journeys and optimize inventory. Real estate firms are using location and price analytics to spot trends before the market does. Manufacturing units track machinery performance and forecast demand using historical patterns.</p>
+
+    <p>The good news? You don’t need an army of data scientists. With cloud tools, no-code dashboards, and automation scripts, even small teams can manage powerful data systems.</p>
+
+    <p>At Pinaki, we help businesses build a lean, effective data strategy—so you can compete smartly, stay compliant, and grow predictably.</p>
+
+    <p><strong>Now is the time to ask:</strong> Are we making decisions based on gut, or data?</p>
+
+    <p><a href="mailto:sachingarkar143@gmail.com">Let’s Discuss Your Strategy →</a></p>
+  </div>
+<!--------------- ENQUIRY FORM START --------------->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align: center;">Email: <a href="mailto:sachingarkar143@gmail.com">sachingarkar143@gmail.com</a></p>
+
+    <form id="enquiryForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+
+    <script>
+      document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+
+        fetch('https://script.google.com/macros/s/AKfycbzNkZLE8E2SxdFk770d3cj-M8EXu2xLJL_iuegFUV9GRlJT-_VT-f0SO0S6rK45kqgA/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data)
+        })
+        .then(response => response.text())
+        .then(result => {
+          alert("✅ Thank you! Your enquiry has been submitted.");
+          form.reset();
+        })
+        .catch(error => {
+          alert("❌ Something went wrong. Please try again later.");
+          console.error(error);
+        });
+      });
+    </script>
+  </section>
+  <!--------------- ENQUIRY FORM END --------------->
+
+
+  <footer>
+    <p>&copy; 2025 Pinaki. Crafted with clarity and purpose.</p>
+  </footer>
+</body>
+</html>

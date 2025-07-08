@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Indian SMEs Can Use Data Analytics</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Urbanist', sans-serif;
+      background: #f6f6f6;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .brand img {
+      height: 32px;
+    }
+
+    .brand span {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .blog-content {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+
+    .blog-content h1 {
+      color: #ff7a00;
+    }
+
+    .blog-content p, .blog-content ul {
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: #ff7a00;
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 10px;
+    }
+
+    section#contact {
+      max-width: 600px;
+      margin: 0 auto 80px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input[type="email"]:invalid {
+      border-color: red;
+    }
+
+    button[type="submit"] {
+      background-color: #ff7a00;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e56700;
+    }
+
+    footer {
+      background-color: #000000cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      <img src="icon.png" alt="Pinaki Logo">
+      <span>Pinaki</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="blog-content">
+    <h1>How Indian SMEs Can Use Data Analytics to Compete with Giants</h1>
+    <p>Small and medium-sized enterprises (SMEs) in India often feel overshadowed by large corporations with massive data science teams. But here’s the good news: SMEs actually have a competitive edge—they’re agile, closer to their customers, and now have access to affordable data tools.</p>
+    <p>Most Indian SMEs already collect data in some form: invoices, inventory, customer orders, social media interactions, or marketing reports. What they lack is a structured way to interpret and act on it.</p>
+    <p>With dashboards in Power BI, Excel, or Looker Studio, SMEs can begin tracking:</p>
+    <ul>
+      <li>Which product categories are driving profit?</li>
+      <li>Which customers are churning?</li>
+      <li>Which supplier is delaying inventory?</li>
+    </ul>
+    <p>Moreover, Python and SQL scripts can automate tasks like daily sales reports, email alerts for low stock, or detecting anomalies in spend.</p>
+    <p>Adopting data analytics doesn’t require a huge budget. It requires awareness, intent, and often a partner who understands the SME space.</p>
+    <p>At Pinaki, we work with SMEs across manufacturing, retail, and services to build lightweight but impactful dashboards and automations.</p>
+    <p>Want to explore this for your business? <a href="mailto:sachingarkar143@gmail.com">Let’s Talk →</a></p>
+  </div>
+
+  <!--------------- ENQUIRY FORM START --------------->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align: center;">Email: <a href="mailto:sachingarkar143@gmail.com">sachingarkar143@gmail.com</a></p>
+
+    <form id="enquiryForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+
+    <script>
+      document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+
+        fetch('https://script.google.com/macros/s/AKfycbzNkZLE8E2SxdFk770d3cj-M8EXu2xLJL_iuegFUV9GRlJT-_VT-f0SO0S6rK45kqgA/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data)
+        })
+        .then(response => response.text())
+        .then(result => {
+          alert("✅ Thank you! Your enquiry has been submitted.");
+          form.reset();
+        })
+        .catch(error => {
+          alert("❌ Something went wrong. Please try again later.");
+          console.error(error);
+        });
+      });
+    </script>
+  </section>
+  <!--------------- ENQUIRY FORM END --------------->
+
+  <footer>
+    <p>&copy; 2025 Pinaki. Crafted with clarity and purpose.</p>
+  </footer>
+</body>
+</html>
