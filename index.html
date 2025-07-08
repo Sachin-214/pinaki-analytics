@@ -36,7 +36,6 @@
       color: white;
       padding: 20px 40px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       position: sticky;
@@ -62,11 +61,15 @@
       font-weight: 600;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
     nav {
       display: flex;
-      flex-wrap: wrap;
       gap: 15px;
-      margin-top: 10px;
     }
 
     nav a {
@@ -231,22 +234,38 @@
       font-weight: 300;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 32px; }
-      .hero p { font-size: 18px; }
-      .section-title { font-size: 26px; }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        text-align: center;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="overlay">
     <header>
-      <a href="index.html" class="brand">
+      <a href="#" class="brand">
         <img src="icon.png" alt="Pinaki Logo">
         <span>Pinaki</span>
       </a>
-      <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="navbar">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#tech">Tech</a>
@@ -255,6 +274,9 @@
         <a href="blog.html">Blogs</a>
       </nav>
     </header>
+    <!-- Your page content goes here -->
+
+
 
     <section class="hero">
       <h1>Pinaki</h1>
@@ -365,5 +387,12 @@
       <p>&copy; 2025 Pinaki. Crafted with clarity and purpose.</p>
     </footer>
   </div>
+  
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
